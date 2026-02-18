@@ -1,20 +1,11 @@
 # 🎮 Roblox Scripts
 
-Collection of Lua scripts for Roblox.
-
-## 📜 Scripts
-
-### Rivals ESP
-Full-featured ESP with boxes, names, health bars, distance, tracers, and highlights.
-
-**Controls:**
-- `RightShift` - Toggle UI
-- Click status bar - Enable/disable ESP
+Collection of Lua scripts for Roblox
 
 ## 💾 Installation
 
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/RivalsESP.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/joeyc1pro/rblx-xploits/refs/heads/main/rivalesp.lua"))()
 ```
 
 Or copy/paste the script into your executor.
