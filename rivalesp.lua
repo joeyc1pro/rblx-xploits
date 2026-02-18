@@ -1,5 +1,5 @@
 -- ================================================
---              RIVALS ESP - by Claude
+--                   RIVALS ESP
 --       Toggle with RightShift | Roblox Script
 -- ================================================
 
