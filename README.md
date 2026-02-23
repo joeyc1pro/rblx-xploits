@@ -8,6 +8,10 @@ Collection of Lua scripts for Roblox
 loadstring(game:HttpGet("https://raw.githubusercontent.com/joeyc1pro/rblx-xploits/refs/heads/main/rivalesp.lua"))()
 ```
 
+```lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/joeyc1pro/rblx-xploits/refs/heads/main/Mcdonalds%20Hub.lua"))()
+```
+
 Or copy/paste the script into your executor.
 
 ## ⚠️ Disclaimer
