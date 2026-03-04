@@ -1,3 +1,7 @@
+----------------------------------------------------------------
+-- Setup stuff
+----------------------------------------------------------------
+
 -- Rayfield UI
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
 
@@ -15,10 +19,10 @@ local defaultJumpPower = 50
 
 -- Window
 local MainWindow = Rayfield:CreateWindow({
-   Name = "Main",
-   LoadingTitle = "Loading your exploit...",
-   LoadingSubtitle = "by no body",
-   ToggleUIKeybind = "K",
+   Name = "McDonalds Hub",
+   LoadingTitle = "Loading McDonalds Hub...",
+   LoadingSubtitle = "by Ronald",
+   ToggleUIKeybind = "M",
    ConfigurationSaving = {
       Enabled = true,
       FileName = "McDonalds Hub"
@@ -64,8 +68,8 @@ MainTab:CreateToggle({
             if UserInputService:IsKeyDown(Enum.KeyCode.S) then dir -= cam.CFrame.LookVector end
             if UserInputService:IsKeyDown(Enum.KeyCode.A) then dir -= cam.CFrame.RightVector end
             if UserInputService:IsKeyDown(Enum.KeyCode.D) then dir += cam.CFrame.RightVector end
-            if UserInputService:IsKeyDown(Enum.KeyCode.Space) then dir += Vector3.new(0,1,0) end
-            if UserInputService:IsKeyDown(Enum.KeyCode.LeftControl) then dir -= Vector3.new(0,1,0) end
+            if UserInputService:IsKeyDown(Enum.KeyCode.E) then dir += Vector3.new(0,1,0) end
+            if UserInputService:IsKeyDown(Enum.KeyCode.Q) then dir -= Vector3.new(0,1,0) end
 
             vel.Velocity = dir.Magnitude > 0 and dir.Unit * speed or Vector3.zero
             gyro.CFrame = cam.CFrame
@@ -253,7 +257,7 @@ MainTab:CreateToggle({
       if Value then
          if not char:FindFirstChild("ForceField") then
             forcefield = Instance.new("ForceField")
-            forcefield.Visible = true -- set true if you want the bubble
+            forcefield.Visible =  -- set true if you want the bubble
             forcefield.Parent = char
          end
       else
@@ -265,7 +269,7 @@ MainTab:CreateToggle({
 
 
 ----------------------------------------------------------------
--- PRIVATE SERVER STRESS TEST (SAFE)
+-- PRIVATE SERVER STRESS TEST (SAFE) jk it crashes the server
 ----------------------------------------------------------------
 local stressEnabled = false
 local stressParts = {}
@@ -472,8 +476,12 @@ RunService.RenderStepped:Connect(function()
         data.HealthFill.Size = UDim2.new(ratio, 0, 1, 0)
         data.HealthFill.BackgroundColor3 =
             Color3.fromRGB(255 * (1 - ratio), 255 * ratio, 0)
+
+     local Players = game:GetService("Players")
     end
 end)
+
+
 
 -- RAYFIELD TOGGLE
 local ESPToggle = MainTab:CreateToggle({
