@@ -4,15 +4,19 @@ Collection of Lua scripts for Roblox
 
 ## 💾 Installation
 
+Rivals ESP Script
+
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/joeyc1pro/rblx-xploits/refs/heads/main/rivalesp.lua"))()
 ```
+
+McDonald's Hub (universal script for all games mostly troll stuff has flying and super speed and stuff like that)
 
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/joeyc1pro/rblx-xploits/refs/heads/main/Mcdonalds%20Hub.lua"))()
 ```
 
-Or copy/paste the script into your executor.
+Or copy/paste the entire script into your executor.
 
 ## ⚠️ Disclaimer
 
