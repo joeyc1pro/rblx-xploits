@@ -16,7 +16,7 @@ McDonald's Hub (universal script for all games mostly troll stuff has flying and
 loadstring(game:HttpGet("https://raw.githubusercontent.com/joeyc1pro/rblx-xploits/refs/heads/main/Mcdonalds%20Hub.lua"))()
 ```
 
-No clip Fly script
+No clip Fly script esp all bright no shadows op script
 
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/joeyc1pro/rblx-xploits/refs/heads/main/noclipfly.lua"))()
