@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>rblx-xploits | Script Hub</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      color: #e2e8f0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* MATRIX CANVAS */
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.6rem;
+      color: #00ff6a;
+      text-shadow: 0 0 15px #00ff6a;
+    }
+
+    header p {
+      color: #9ca3af;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .warning {
+      background: rgba(0,255,106,0.08);
+      border: 1px solid rgba(0,255,106,0.3);
+      color: #00ff6a;
+      padding: 12px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .card {
+      background: rgba(0,0,0,0.6);
+      border: 1px solid rgba(0,255,106,0.2);
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 16px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 20px rgba(0,255,106,0.05);
+    }
+
+    .title {
+      color: #00ff6a;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    pre {
+      background: rgba(0,0,0,0.8);
+      padding: 12px;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 0.85rem;
+      color: #22c55e;
+      border: 1px solid rgba(0,255,106,0.15);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      margin-right: 8px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid #00ff6a;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 0.9rem;
+      color: #00ff6a;
+      background: rgba(0,0,0,0.5);
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background: rgba(0,255,106,0.15);
+      box-shadow: 0 0 10px #00ff6a;
+    }
+
+    footer {
+      text-align: center;
+      color: #374151;
+      padding: 30px;
+      font-size: 0.8rem;
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+<canvas id="matrix"></canvas>
+
+<header>
+  <h1>rblx-xploits</h1>
+  <p>Lua Script Hub</p>
+</header>
+
+<div class="container">
+
+  <div class="warning">
+    ⚠ Educational use only. Use at your own risk.
+  </div>
+
+  <!-- SCRIPT 1 -->
+  <div class="card">
+    <div class="title">Rivals ESP Script</div>
+
+    <pre id="s1">loadstring(game:HttpGet("https://raw.githubusercontent.com/joeyc1pro/rblx-xploits/refs/heads/main/rivalesp.lua"))()</pre>
+
+    <button class="btn" onclick="copy('s1')">Copy Script</button>
+    <button class="btn" onclick="window.open('https://raw.githubusercontent.com/joeyc1pro/rblx-xploits/refs/heads/main/rivalesp.lua','_blank')">
+      View Source Code
+    </button>
+  </div>
+
+  <!-- SCRIPT 2 -->
+  <div class="card">
+    <div class="title">McDonald's Hub</div>
+
+    <pre id="s2">loadstring(game:HttpGet("https://raw.githubusercontent.com/joeyc1pro/rblx-xploits/refs/heads/main/Mcdonalds%20Hub.lua"))()</pre>
+
+    <button class="btn" onclick="copy('s2')">Copy Script</button>
+    <button class="btn" onclick="window.open('https://raw.githubusercontent.com/joeyc1pro/rblx-xploits/refs/heads/main/Mcdonalds%20Hub.lua','_blank')">
+      View Source Code
+    </button>
+  </div>
+
+  <!-- SCRIPT 3 -->
+  <div class="card">
+    <div class="title">No Clip Fly Script</div>
+
+    <pre id="s3">loadstring(game:HttpGet("https://raw.githubusercontent.com/joeyc1pro/rblx-xploits/refs/heads/main/noclipfly.lua"))()</pre>
+
+    <button class="btn" onclick="copy('s3')">Copy Script</button>
+    <button class="btn" onclick="window.open('https://raw.githubusercontent.com/joeyc1pro/rblx-xploits/refs/heads/main/noclipfly.lua','_blank')">
+      View Source Code
+    </button>
+  </div>
+
+</div>
+
+<footer>
+  MIT License • Script Hub
+</footer>
+
+<script>
+function copy(id) {
+  navigator.clipboard.writeText(document.getElementById(id).innerText)
+    .then(() => alert("Copied!"));
+}
+
+/* MATRIX RAIN */
+const canvas = document.getElementById("matrix");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const letters = "01";
+const fontSize = 16;
+const columns = canvas.width / fontSize;
+
+const drops = [];
+
+for (let x = 0; x < columns; x++) {
+  drops[x] = Math.random() * canvas.height;
+}
+
+function draw() {
+  ctx.fillStyle = "rgba(0, 0, 0, 0.08)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  ctx.fillStyle = "#00ff6a";
+  ctx.font = fontSize + "px monospace";
+
+  for (let i = 0; i < drops.length; i++) {
+    const text = letters[Math.floor(Math.random() * letters.length)];
+    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+    // random speed per column
+    drops[i] += Math.random() * 1.5 + 0.5;
+
+    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+      drops[i] = 0;
+    }
+  }
+}
+
+setInterval(draw, 33);
+
+window.addEventListener("resize", () => location.reload());
+</script>
+
+</body>
+</html>
